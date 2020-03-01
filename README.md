@@ -238,7 +238,7 @@ The neopixels will should lit green, they will turn red if not enough light is r
 
 ### step5.go - Display
 
-![PyBadge](./images/pybadge_hello.png)
+![PyBadge](./images/pybadge_hello.jpg)
 
 Run the code.
 
