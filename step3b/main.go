@@ -51,13 +51,13 @@ func main() {
 			k--
 		}
 		ledColors[0] = getRainbowRGB(k)
-		ledColors[1] = getRainbowRGB(k +10)
-		ledColors[2] = getRainbowRGB(k +20)
-		ledColors[3] = getRainbowRGB(k +30)
-		ledColors[4] = getRainbowRGB(k +40)
+		ledColors[1] = getRainbowRGB(k + 10)
+		ledColors[2] = getRainbowRGB(k + 20)
+		ledColors[3] = getRainbowRGB(k + 30)
+		ledColors[4] = getRainbowRGB(k + 40)
 		leds.WriteColors(ledColors)
 
-		time.Sleep(10*time.Millisecond)
+		time.Sleep(10 * time.Millisecond)
 	}
 }
 
