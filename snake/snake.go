@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/conejoninja/workshop/snake/fonts"
+	"github.com/conejoninja/workshop/fonts"
 	"tinygo.org/x/tinyfont"
 )
 

@@ -310,8 +310,30 @@ And then move the arcade.uf2 file to the PYBADGEBOOT drive.
 
 The display will show a bar for each X,Y,Z axis. Move the Pybadge to see it in action.
 
+### step8.go - Buzzer, Buttons
 
-### step8.go - Snake Game
+Run the code.
+
+#### Linux
+
+```
+tinygo flash -target pybadge ./step8/main.go
+```
+
+#### macOS
+```
+tinygo flash -target pybadge -port=$PYBADGE_DEV_PATH ./step8/main.go
+```
+
+#### Windows
+```
+tinygo build -o arcade.uf2 -target pybadge -port=$PYBADGE_DEV_PATH ./step8/main.go
+```                                            
+And then move the arcade.uf2 file to the PYBADGEBOOT drive.
+
+Press the buttons and create your melody.
+
+### Snake Game
 
 ![PyBadge](./images/pybadge_snake.jpg)
 
@@ -335,3 +357,29 @@ tinygo build -o arcade.uf2 -target pybadge -port=$PYBADGE_DEV_PATH ./snake/main.
 And then move the arcade.uf2 file to the PYBADGEBOOT drive.
 
 Play the famous Snake game on the pybadge.
+
+
+### My Name Is
+
+![PyBadge](./images/pybadge_mynameis.jpg)
+
+Run the code.
+
+#### Linux
+
+```
+tinygo flash -target pybadge ./mynameis/main.go
+```
+
+#### macOS
+```
+tinygo flash -target pybadge -port=$PYBADGE_DEV_PATH ./mynameis/main.go
+```
+
+#### Windows
+```
+tinygo build -o arcade.uf2 -target pybadge -port=$PYBADGE_DEV_PATH ./mynameis/main.go
+```                                            
+And then move the arcade.uf2 file to the PYBADGEBOOT drive.
+
+Configure your name and use the awesome TinyGo-powered badge!
