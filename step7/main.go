@@ -9,9 +9,8 @@ import (
 	"tinygo.org/x/tinyfont"
 	"tinygo.org/x/tinyfont/proggy"
 
-	"tinygo.org/x/tinydraw"
-
 	"tinygo.org/x/drivers/st7735"
+	"tinygo.org/x/tinydraw"
 )
 
 func main() {
@@ -21,6 +20,7 @@ func main() {
 		MISO:      machine.SPI1_MISO_PIN,
 		Frequency: 8000000,
 	})
+
 	display := st7735.New(machine.SPI1, machine.TFT_RST, machine.TFT_DC, machine.TFT_CS, machine.TFT_LITE)
 	display.Configure(st7735.Config{
 		Rotation: st7735.ROTATION_90,
