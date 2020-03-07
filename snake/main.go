@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"tinygo.org/x/drivers/shifter"
-
 	"tinygo.org/x/drivers/st7735"
 )
 
@@ -36,7 +35,7 @@ func main() {
 		Rotation: st7735.ROTATION_90,
 	})
 
-	buttons = shifter.New(shifter.EIGHT_BITS, machine.BUTTON_LATCH, machine.BUTTON_CLK, machine.BUTTON_OUT)
+	buttons = shifter.NewButtons()
 	buttons.Configure()
 
 	snakeGame := Game{

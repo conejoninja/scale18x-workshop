@@ -5,7 +5,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/conejoninja/workshop/fonts"
+	"../fonts"
+	"tinygo.org/x/drivers/shifter"
 	"tinygo.org/x/tinyfont"
 )
 
@@ -95,28 +96,28 @@ func (game *Game) Start() {
 			time.Sleep(2000 * time.Millisecond)
 			for game.status == PLAY {
 
-				buttons.Read8Input()
-				if buttons.Pins[BUTTON_LEFT].Get() {
+				buttons.ReadInput()
+				if buttons.Pins[shifter.BUTTON_LEFT].Get() {
 					if game.snake.direction != 3 {
 						game.snake.direction = 0
 					}
 				}
-				if buttons.Pins[BUTTON_UP].Get() {
+				if buttons.Pins[shifter.BUTTON_UP].Get() {
 					if game.snake.direction != 2 {
 						game.snake.direction = 1
 					}
 				}
-				if buttons.Pins[BUTTON_DOWN].Get() {
+				if buttons.Pins[shifter.BUTTON_DOWN].Get() {
 					if game.snake.direction != 1 {
 						game.snake.direction = 2
 					}
 				}
-				if buttons.Pins[BUTTON_RIGHT].Get() {
+				if buttons.Pins[shifter.BUTTON_RIGHT].Get() {
 					if game.snake.direction != 0 {
 						game.snake.direction = 3
 					}
 				}
-				if buttons.Pins[BUTTON_SELECT].Get() {
+				if buttons.Pins[shifter.BUTTON_SELECT].Get() {
 					game.status = START
 				}
 				game.moveSnake()
