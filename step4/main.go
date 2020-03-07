@@ -4,14 +4,14 @@ import (
 	"image/color"
 	"time"
 
-	"tinygo.org/x/drivers/ws2812"
-
 	"github.com/tinygo-org/tinygo/src/machine"
+	"tinygo.org/x/drivers/ws2812"
 )
 
 func main() {
 	neo := machine.NEOPIXELS
 	neo.Configure(machine.PinConfig{Mode: machine.PinOutput})
+
 	leds := ws2812.New(neo)
 	ledColors := make([]color.RGBA, 5)
 

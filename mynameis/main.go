@@ -4,7 +4,7 @@ import (
 	"image/color"
 	"machine"
 
-	"github.com/conejoninja/scale18x-workshop/fonts"
+	"../fonts"
 
 	"tinygo.org/x/tinydraw"
 	"tinygo.org/x/tinyfont"

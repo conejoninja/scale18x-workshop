@@ -38,16 +38,16 @@ func main() {
 	leds := ws2812.New(neo)
 	ledColors := make([]color.RGBA, 5)
 
-	buttons := shifter.New(shifter.EIGHT_BITS, machine.BUTTON_LATCH, machine.BUTTON_CLK, machine.BUTTON_OUT)
+	buttons := shifter.NewButtons()
 	buttons.Configure()
 
 	var k uint8
 	for {
 		buttons.Read8Input()
-		if buttons.Pins[BUTTON_LEFT].Get() {
+		if buttons.Pins[shifter.BUTTON_LEFT].Get() {
 			k++
 		}
-		if buttons.Pins[BUTTON_RIGHT].Get() {
+		if buttons.Pins[shifter.BUTTON_RIGHT].Get() {
 			k--
 		}
 		ledColors[0] = getRainbowRGB(k)
