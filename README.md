@@ -1,4 +1,4 @@
-# PyBadge Workshop
+# GoBadge Workshop
 
 ## What you need
 
